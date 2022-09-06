@@ -14,8 +14,16 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id', true);
+            $table->longText('content');
+            $table->text('file_name');
+            $table->unsignedBigInteger('user_id');
+            // 論理削除を定義→deleted_atを自動生成
+            $table->softDeletes();
+            // timestampと書いてしまうと、レコード挿入時、更新時に値が入らないので、DB::rawで直接書いている
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
