@@ -19,3 +19,5 @@ use App\Http\Controllers\ApplicationController;
 // });ll
 
 Route::get('/', [ApplicationController::class, 'index']);
+Route::get('/login', [ApplicationController::class, 'showLogin'])->name('showLogin');
+Route::post('/login', [ApplicationController::class, 'login'])->name('login');

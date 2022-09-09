@@ -75,7 +75,46 @@
                     </a>
                 </div>
             </div>
+        </div>
 
+        <div class="line"></div>
+
+        <div class="area">
+            <div class="area_left">
+                <h1>fukui</h1>
+                <img src="\img\area_left.jpg">
+            </div>
+
+            <div class="area_right">
+                <h2 class="area_title">地域別</h2>
+                <div class="area_right1">
+                    <h1>tsuruga</h1>
+                    <img src="\img\area_right1.jpg">
+                </div>
+                <div class="area_right2">
+                    <h1>ono</h1>
+                    <img src="\img\area_right2.jpg">
+                    <a href="" class="area_other_page">
+                    <h2>そのほかの<br>地域</h2>
+                    <div class="triangle_btn">
+                    </div>    
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        
+        <div class="footer">
+            <div class="twitter_icon">
+                <img src="\img\twitter.jpg">
+            </div>
+            <div class="facebook_icon">
+                <img src="\img\facebook.png">
+            </div>
+            <div class="line_icon">
+                <img src="\img\line.png">
+            </div>
         </div>
     </body>
 </html>

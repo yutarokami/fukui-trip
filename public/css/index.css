@@ -109,7 +109,7 @@ h1 {
     margin-left: 116px;
 }
 
-.high_rated_title, .category_title {
+.high_rated_title, .category_title, .area_title {
     color: #3D3D3D;
     font-size: 40px;
     line-height: 64px;
@@ -149,9 +149,9 @@ h1 {
     margin-bottom: 192px;
 }
 
-.high_other_page, .category_other_page {
+.high_other_page, .category_other_page, .area_other_page {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 296px;
     height: 128px;
@@ -162,11 +162,13 @@ h1 {
     margin-left: 200px;
 }
 
-.high_other_page h2, .category_other_page h2 {
+.high_other_page h2, .category_other_page h2, .area_other_page h2 {
     color: #3D3D3D;
     font-size: 32px;
     line-height: 64px;
     text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+    text-align: right;
+    margin-right: 20px;
 }
 
 .triangle_btn {
@@ -265,4 +267,102 @@ h1 {
     margin: 176px 0 0 8px;
 }
 
-/*/ 下記以外のcssは、high_other_page h2に書いている /*/
+/* area部分のcss */
+.area {
+    display: flex;
+}
+
+.area_left {
+    width: cal(116px+400px+35px);
+    display: flex;
+    position: relative;
+    padding: 40px 0 0 116px;
+}
+
+.area_left h1 {
+    position: absolute;
+    top: 24px;
+    left: 292px;
+}
+
+.area_left img {
+    width: 400px;
+    height: 504px;
+    object-fit: cover;
+}
+
+.area_right {
+    width: cal(1512px-116px-400px-35px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*/ 下記以外のcssは、high_rated_titleに書いている /*/
+.area_title {
+    margin: 40px 0 0 437px;
+    text-align: right;
+}
+
+.area_right1 {
+    display: flex;
+    padding: 56px 0 0 37px;
+    position: relative;
+}
+
+.area_right1 h1 {
+    position: absolute;
+    top: 252px;
+    left: 39px;
+}
+
+.area_right1 img {
+    width: 800px;
+    height: 296px;
+    object-fit: cover;
+}
+
+.area_right2 {
+    display: flex;
+    padding: 40px 0 0 77px;
+    position: relative;
+}
+
+.area_right2 h1 {
+    position: absolute;
+    top: 40px;
+    left: 541px;
+}
+
+.area_right2 img {
+    width: 600px;
+    height: 256px;
+    object-fit: cover;
+}
+
+/*/ 下記以外のcssは、high_other_pageに書いている /*/
+.area_other_page {
+    width: 264px;
+    margin: 224px 0 16px;
+}
+
+/* footer部分のcss*/
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.twitter_icon, .facebook_icon, .line_icon {
+    width: 96px;
+    height: 96px;
+    margin: 40px 62px 64px 62px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer img {
+    width: 100%;
+    height: 100%;
+}
