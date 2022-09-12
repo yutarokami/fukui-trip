@@ -18,6 +18,11 @@ use App\Http\Controllers\ApplicationController;
 //     return view('welcome');
 // });ll
 
+// トップ画面
 Route::get('/', [ApplicationController::class, 'index']);
+
+// ログインフォーム表示
 Route::get('/login', [ApplicationController::class, 'showLogin'])->name('showLogin');
-Route::post('/login', [ApplicationController::class, 'login'])->name('login');
+
+// ログイン処理
+Route::post('/login/login', [ApplicationController::class, 'login'])->name('login');
