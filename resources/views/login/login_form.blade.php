@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン画面</title>
     
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/signin.css') }}" rel="stylesheet">
 
@@ -27,6 +26,19 @@
             </ul>
         </div>
     @endif
+
+    @if (session('login_error'))
+        <div class="alert alert-danger">
+            {{ session('login_error') }}
+        </div>
+    @endif
+
+    @if (session('logout'))
+        <div class="alert alert-danger">
+            {{ session('logout') }}
+        </div>
+    @endif
+
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" autofocus>
     <label for="inputPassword" class="sr-only">Password</label>

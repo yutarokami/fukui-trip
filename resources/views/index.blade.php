@@ -21,7 +21,7 @@
             <div class="top_right_block">
                 <div class="top_right_block1">
                     <h2 class="sub_title">しあわせなまち、</br>ふくい。</h2>
-                    <a href="" class="menu_btn">MENU</a>
+                    <a href="/login" class="menu_btn">MENU</a>
                 </div>
                 <img src="\img\top_image_right.jpg">      
             </div>
