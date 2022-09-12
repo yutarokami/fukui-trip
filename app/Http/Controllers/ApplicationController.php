@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginFormRequest;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -15,7 +16,7 @@ class ApplicationController extends Controller
         return view('login.login_form');
     }
 
-    public function login() {
-        
+    public function login(LoginFormRequest $request) {
+        dd($request->all());
     }
 }
