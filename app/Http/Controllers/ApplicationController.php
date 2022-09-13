@@ -14,7 +14,7 @@ class ApplicationController extends Controller
     }
 
     public function showLogin() {
-        return view('login.login_form');
+        return view('login');
     }
 
     public function login(LoginFormRequest $request) {

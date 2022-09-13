@@ -19,7 +19,7 @@ use App\Http\Controllers\ApplicationController;
 // });ll
 
 // トップ画面
-Route::get('/', [ApplicationController::class, 'index']);
+Route::get('/', [ApplicationController::class, 'index'])->name('index');
 
 // ログイン前のUser=guest
 Route::middleware(['guest'])->group(function () {
@@ -31,6 +31,7 @@ Route::middleware(['guest'])->group(function () {
 
 // ログイン後のUser=auth
 Route::middleware(['auth'])->group(function () {
+    
     Route::get('home', function() {
         return view('home');
     })->name('home');

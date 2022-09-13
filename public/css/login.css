@@ -1,0 +1,189 @@
+* {
+    max-width: 756px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Unicase', 'Noto Sans JP', sans-serif;
+    color: #3D3D3D;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* .login_header部分のcss */
+
+.login_header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.top_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 96px;
+    width: 496px;
+    margin: 40px 0 0 110px;
+}
+
+.close_btn {
+    color: #000000; 
+    font-size: 20px;
+    text-decoration: none;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    position: absolute;
+    top: 88px;
+    left: 616px;
+}
+
+/* .login_group部分のcss */
+
+.login_group, .signin_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 40px;
+}
+
+/*/*.icon関係のcss /**/
+
+.icon_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_group_top, .icon_group_bottom {
+    display: flex;
+    align-items: center;
+}
+
+.icon_apple, .icon_google, .icon_facebook, .icon_twitter {
+    width: 280px;
+    height: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 24px;
+    margin: 32px 24px 0 24px;
+    padding-right: 8px;
+}
+
+.icon_apple {
+    background-color: #090A0A;
+}
+
+.fa-brands {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 16px 0 16px;
+}
+
+.icon_google .fa-brands {
+    color: #090A0A;
+}
+
+.icon_google {
+    background-color: #ffffff;
+    border: 2px solid #090A0A;
+}
+
+.icon_facebook {
+    background-color: #0078FF;
+}
+
+.icon_twitter {
+    background-color: #1DA1F2;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: 'Inter';
+}
+
+.icon_apple h4 {
+    color: #ffffff;
+}
+
+.icon_google h4 {
+    color: #090A0A;
+}
+
+.icon_facebook h4 {
+    color: #ffffff;
+}
+
+.icon_twitter h4 {
+    color: #ffffff;
+}
+
+
+/* .form-login部分のcss */
+
+.form-login {
+    font-family: 'Noto Sans JP';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email_box, .password_box, .login_id_box {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email_title, .password_title, .login_id_title {
+    width: 160px;
+    font-size: 18px;
+}
+
+.email_form, .password_form, .login_id_form {
+    font-family: 'sans-serif';
+    font-size: 12px;
+    width: 408px;
+    height: 24px;
+    padding: 8px 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+}
+
+.login_button, .signin_button {
+    width: 352px;
+    height: 56px;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin: 8px 0 16px 0;
+    font-size: 24px;
+    letter-spacing: 10%;
+}
+
+.login_button {
+    background-color: #E300A4;
+}
+
+.line {
+    width: 624px;
+    height: 16px;
+    margin: 0 auto;
+    border-bottom: 1px solid #3D3D3D;
+}
+
+/* .signin_group部分のcss */
+
+.signin_button {
+    background-color: #00E384;
+}
