@@ -44,6 +44,6 @@ class ApplicationController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('showLogin')->with('logout','ログアウトしました！');;
+        return redirect()->route('showLogin')->with('logout','ログアウトしました！');
     }
 }

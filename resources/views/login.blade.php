@@ -55,6 +55,8 @@
 
         <h2 class="login_title">メールアドレスでログイン</h2>
         <form class="form-login" method="POST" action="{{ route('login') }}">
+            @csrf
+
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -78,8 +80,8 @@
                 <label for="password" class="password_title">パスワード</label>
                 <input type="password" id="password" name="password" class="password_form" placeholder="パスワード" autofocus>
             </div>
+            <button class="login_button" type="submit">ログイン</button>
         </form>
-        <button class="login_button" type="submit">ログイン</button>
     </div>
 
     <div class="line"></div>
@@ -113,14 +115,15 @@
 
         <h2 class="login_title">メールアドレスで登録</h2>
         <form class="form-login" method="POST" action="{{ route('login') }}">
+            @csrf
             @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif
 
             <x-alert type="danger" :session="session('login_error')"/>
@@ -141,8 +144,9 @@
                 <label for="password" class="password_title">パスワード</label>
                 <input type="password" id="password" name="password" class="password_form" placeholder="パスワード(半角英数字・8文字以上)" autofocus>
             </div>
+            <button class="signin_button" type="submit">アカウント登録</button>
         </form>
-        <button class="signin_button" type="submit">アカウント登録</button>
+        
     </div>
 
     <!-- <form class="form-signin" method="POST" action="{{ route('login') }}">
