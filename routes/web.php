@@ -38,6 +38,11 @@ Route::middleware(['auth'])->group(function () {
 
     // ログアウト
     Route::post('logout', [ApplicationController::class, 'logout'])->name('logout');
+
+    // searchページを表示
+    Route::get('/search', [ApplicationController::class, 'search'])->name('search');
+    // postページを表示
+    // myページを表示
 });
 
 

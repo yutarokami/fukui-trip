@@ -9,14 +9,17 @@ use Illuminate\Support\Facades\Auth;
 
 class ApplicationController extends Controller
 {
+    // indexページ
     public function index() {
         return view('index');
     }
 
+    // loginページ
     public function showLogin() {
         return view('login');
     }
 
+    // login処理
     public function login(LoginFormRequest $request) {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
@@ -33,6 +36,7 @@ class ApplicationController extends Controller
             'email' => 'メールアドレスかパスワードが間違っています。',
         ])->onlyInput('email');
     }
+
     /**
      * ユーザーをアプリケーションからログアウトさせる
      *
@@ -46,4 +50,11 @@ class ApplicationController extends Controller
         $request->session()->regenerateToken();
         return redirect()->route('showLogin')->with('logout','ログアウトしました！');
     }
+
+    // searchページ
+    public function search() {
+        return view('search');
+    }
+
+
 }
