@@ -19,5 +19,19 @@
 </head>
 
 <body>
-a
+    <header>
+        <h2 class="sub_title">しあわせなまち、</br>ふくい。</h2>
+        <a href="/index" class="back_btn">BACK</a>
+    </header>
+
+    <div class="menu_title">
+        <div class="title">
+            <h2 class="title_en">POST</h2>
+            <h2 class="title_ja">投稿する</h2>
+        </div>
+        <img src="\img\post.jpg">
+    </div>
+
+    
+
 </body>
