@@ -26,7 +26,7 @@ Route::middleware(['guest'])->group(function () {
     // ログインフォーム表示
     Route::get('/login', [ApplicationController::class, 'showLogin'])->name('showLogin');
     // ログイン処理
-    Route::post('/login/login', [ApplicationController::class, 'login'])->name('login');
+    Route::post('/home', [ApplicationController::class, 'login'])->name('login');
 });
 
 // ログイン後のUser=auth
