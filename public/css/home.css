@@ -80,3 +80,16 @@
 .title_ja {
     font-size: 32px;
 }
+
+.logout_button {
+    width: 352px;
+    height: 56px;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin: 8px 0 16px 0;
+    font-size: 24px;
+    letter-spacing: 10%;
+    background-color: #c3c3c3;
+    margin-left: 124px;
+}
