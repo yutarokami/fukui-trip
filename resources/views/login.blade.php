@@ -126,14 +126,10 @@
                 </div>
             @endif
 
-            <x-alert type="danger" :session="session('login_error')"/>
-            
-            <x-alert type="danger" :session="session('logout')"/>
-
-            <div class="login_id_box">
+            <!-- <div class="login_id_box">
                 <label for="login_id" class="login_id_title">ログインID</label>
                 <input type="login_id" id="login_id" name="login_id" class="login_id_form" placeholder="ログインID(半角英数字・3文字以上)※変更不可" autofocus>
-            </div>
+            </div> -->
 
             <div class="email_box">
                 <label for="email" class="email_title">メールアドレス</label>
