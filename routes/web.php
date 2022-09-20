@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
     // searchページを表示
     Route::get('/search', [ApplicationController::class, 'search'])->name('search');
     // postページを表示
+    Route::get('/post', [ApplicationController::class, 'post'])->name('post');
     // myページを表示
 });
 

@@ -55,6 +55,10 @@ class ApplicationController extends Controller
     public function search() {
         return view('search');
     }
+    // postページ
+    public function post() {
+        return view('post');
+    }
 
 
 }
