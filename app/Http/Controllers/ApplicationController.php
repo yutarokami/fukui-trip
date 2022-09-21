@@ -29,7 +29,7 @@ class ApplicationController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('home')->with('login_success','ログイン成功しました！');
+            return redirect()->route('login_menu')->with('login_success','ログイン成功しました！');
         }
 
         return back()->withErrors([

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ホーム画面</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login_menu.css">
     <!-- googlefont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
