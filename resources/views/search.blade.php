@@ -21,7 +21,7 @@
 <body>
     <header>
         <h2 class="sub_title">しあわせなまち、</br>ふくい。</h2>
-        <a href="/index" class="back_btn">BACK</a>
+        <a href="/home" class="back_btn">BACK</a>
     </header>
 
     <div class="menu_title">
