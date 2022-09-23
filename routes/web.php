@@ -16,7 +16,13 @@ use App\Http\Controllers\ApplicationController;
 
 // Route::get('/', function () {
 //     return view('welcome');
-// });ll
+// });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 // トップ画面
 Route::get('/', [ApplicationController::class, 'index'])->name('index');
@@ -45,5 +51,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/post', [ApplicationController::class, 'post'])->name('post');
     // myページを表示
 });
-
-
