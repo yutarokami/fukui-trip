@@ -18,36 +18,36 @@ use App\Http\Controllers\ApplicationController;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
 // トップ画面
-Route::get('/', [ApplicationController::class, 'index'])->name('index');
+Route::get('/', \App\Http\Controllers\Web\IndexController::class)->name('index');
 
-// ログイン前のUser=guest
-Route::middleware(['guest'])->group(function () {
-    // ログインフォーム表示
-    Route::get('/login', [ApplicationController::class, 'showLogin'])->name('showLogin');
-    // ログイン処理
-    Route::post('/login_menu', [ApplicationController::class, 'login'])->name('login');
-});
+// // ログイン前のUser=guest
+// Route::middleware(['guest'])->group(function () {
+//     // ログインフォーム表示
+//     Route::get('/login', [ApplicationController::class, 'showLogin'])->name('showLogin');
+//     // ログイン処理
+//     Route::post('/login_menu', [ApplicationController::class, 'login'])->name('login');
+// });
 
-// ログイン後のUser=auth
-Route::middleware(['auth'])->group(function () {
+// // ログイン後のUser=auth
+// Route::middleware(['auth'])->group(function () {
     
-    Route::get('login_menu', function() {
-        return view('login_menu');
-    })->name('login_menu');
+//     Route::get('login_menu', function() {
+//         return view('login_menu');
+//     })->name('login_menu');
 
-    // ログアウト
-    Route::post('logout', [ApplicationController::class, 'logout'])->name('logout');
+//     // ログアウト
+//     Route::post('logout', [ApplicationController::class, 'logout'])->name('logout');
+// });
 
-    // searchページを表示
-    Route::get('/search', [ApplicationController::class, 'search'])->name('search');
-    // postページを表示
-    Route::get('/post', [ApplicationController::class, 'post'])->name('post');
-    // myページを表示
-});
+// searchページを表示
+Route::get('/search',  \App\Http\Controllers\Web\SearchController::class)->name('search');
+// postページを表示
+Route::get('/post', \App\Http\Controllers\Web\PostController::class)->name('post');
+// myページを表示
